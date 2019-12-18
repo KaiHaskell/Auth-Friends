@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { AxiosWithAuth } from "../utils/axiosWithAuth";
 import FriendCard from "./FriendCard";
 
@@ -24,6 +25,11 @@ const Friends = props => {
           />
         ))}
       </ul>
+      <Link to="/addfriend">
+        <button type="button" class="btn btn-outline-primary">
+          Add Friend
+        </button>
+      </Link>
     </div>
   );
 };
